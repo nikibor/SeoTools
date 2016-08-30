@@ -1,0 +1,20 @@
+﻿@model SeoToolsMainApp.Api.PageScan
+
+<div class="card">
+    <div class="card-header">
+        <h3>Проверка на наличие Seo тегов в разметке</h3>
+    </div>
+    <div class="card-block">
+        <ul class="list-group">
+            <li class="list-group-item">Наличие тега <i>description</i>: <strong>@Model.HaveDescription</strong></li>
+            <li class="list-group-item">Наличие тега <i>keywords</i>: <strong>@Model.HaveKeyWords</strong></li>
+            <li class="list-group-item">Наличие тега <i>robots</i>: <strong>@Model.HaveRobots</strong></li>
+            <li class="list-group-item">Наличие тега <i>noindex</i>: <strong>@Model.HaveNoindex</strong></li>
+            <li class="list-group-item">Наличие комментируемых участков html верстки: <strong>@Model.HaveComments</strong></li>
+            <li class="list-group-item">Наличие альтернативного текста у изображений: <strong>@Model.HaveAltImgText</strong></li>
+            <li class="list-group-item">Наличие описания у изображений при наведении: <i></i> <strong>@Model.HaveTitleImg</strong></li>            
+            <li class="list-group-item">Наличик header: <strong>@Model.HaveHeader</strong></li>
+            <li class="list-group-item">Наличие footer: <strong>@Model.HaveFooter</strong></li>
+        </ul>
+    </div>
+</div>

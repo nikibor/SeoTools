@@ -1,0 +1,16 @@
+﻿@model SeoToolsMainApp.Api.WhoIsApiXml
+
+<div class="card">
+    <div class="card-header">
+        <h3>Информация о хостинге и домене</h3>
+    </div>
+    <div class="card-block">
+        <ul class="list-group">
+            <li class="list-group-item">Организация зарегистрировшая домен <strong>@Model.Organization</strong></li>
+            <li class="list-group-item">Дата регистрации домена <strong>@Model.CreatedDate</strong></li>
+            <li class="list-group-item">Дата истечения сроков пользования доменом <strong>@Model.ExpiresDate</strong></li>            
+            <li class="list-group-item">Хостинг: <strong>@Model.Host</strong></li>
+            <li class="list-group-item">Текущий статус пользования <strong>@Model.Status</strong></li>
+        </ul>
+    </div>
+</div>                     

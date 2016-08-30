@@ -1,0 +1,14 @@
+﻿@model SeoToolsMainApp.Core.HttpProtocol
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CommonPage.cshtml";
+}
+<div class="jumbotron" align="center">
+    @using (Html.BeginForm("Scan", "Home"))
+    {
+        <p>Ссылка на сайт: @Html.TextBoxFor(x => x.Url)</p>
+        <input type="submit" class="btn btn-lg btn-success" value="Отправить" />
+        @Html.AntiForgeryToken()
+    }
+</div>

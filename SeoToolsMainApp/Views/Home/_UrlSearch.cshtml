@@ -1,0 +1,94 @@
+﻿@model SeoToolsMainApp.Api.UrlSearchResult
+
+<div class="card">
+    <div class="card-header">
+        <h3>Ссылки на сторонние сервисы</h3>
+    </div>
+    <div class="card-block">
+        <ul class="list-group">
+            <li class="list-group-item">
+                
+                    <div class="btn btn-secondary btn-block">
+                        <a href="@Model.YandexSearch">Поиск в Яндексе по теме</a>
+                    </div>                
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.YandexImagesSearch">
+                    <div class="btn btn-secondary btn-block">
+                        Поиск изображений в Яндексе
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.YandexIndexPagesSearch">
+                    <div class="btn btn-secondary btn-block">
+                        Поиск индексированных страниц в Яндексе
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.YandexNewsSearch">
+                    <div class="btn btn-secondary btn-block">
+                        Поиск новостей в Яндексе
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.YandexVirusCheck">
+                    <div class="btn btn-secondary btn-block">
+                        Проверка на вирусы Яндексом
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.YandexOrphographyCheck">
+                    <div class="btn btn-secondary btn-block">
+                        Проверка орфографии яндексом
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.GoogleSearch">
+                    <div class="btn btn-secondary btn-block">
+                        Поиск в Google по теме
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.GoogleImagesSearch">
+                    <div class="btn btn-secondary btn-block">
+                        Поиск изображений в Google
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.GoogleSafeBrowserCheck">
+                    <div class="btn btn-secondary btn-block">
+                        Проверка на вирусы Google
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.LinkPadStatistics">
+                    <div class="btn btn-secondary btn-block">
+                        Катологи на LinkPad
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.DmozCatalog">
+                    <div class="btn btn-secondary btn-block">
+                        Каталоги на Dmoz
+                    </div>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="@Model.LiveInternetCatalog">
+                    <div class="btn btn-secondary btn-block">
+                        Каталоги на LiveInternet
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
