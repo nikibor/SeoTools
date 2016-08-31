@@ -1,0 +1,17 @@
+﻿@model SeoToolsMainApp.Models.DividedModel
+
+@{
+    ViewBag.Title = "Scan";
+    Layout = "~/Views/Shared/_CommonPage.cshtml";
+}
+
+<h2>Scan</h2>
+@Html.Partial("_ScreenShoot",Model.Api["screenShoot"])
+@Html.Partial("_GooglePageSpeed", Model.Api["googlePageSpeed"])
+@Html.Partial("_GoogleSafeBrowsing", Model.Api["googleSafeBrowsing"])
+@Html.Partial("_PageScan", Model.Api["pageScan"])
+@Html.Partial("_SystemInformation", Model.Api["systemInformation"])
+@Html.Partial("_UrlSearch", Model.Api["urlSearch"])
+@Html.Partial("_WhoIsApi", Model.Api["whoIsApi"])
+@Html.Partial("_Yandex", Model.Api["yandex"])
+

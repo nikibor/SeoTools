@@ -1,16 +1,17 @@
 ﻿using System.Text.RegularExpressions;
 using SeoToolsMainApp.Core;
 using SeoToolsMainApp.Interfaces;
-using SeoToolsMainApp.Models;
+
 
 namespace SeoToolsMainApp.Api
 {
     /// <summary>
     /// Получение системной информации передоваемой в http заголовке
     /// </summary>
-    public class SystemInformation : AbstractApi, IHttpHeadersOfServer
+    public class SystemInformation :AbstractApi, IHttpHeadersOfServer
     {
-        public string InformationAboutServer { set; get; }        
+        public string InformationAboutServer { set; get; }
+
         public SystemInformation(string url)
         {
             string domen = url.Remove(0, url.IndexOf('/') + 2);
@@ -18,10 +19,7 @@ namespace SeoToolsMainApp.Api
             InformationAboutServer = HttpProtocol.GetDataFromHtml(Url, "//pre[@class='prettyprint lang-bsh']");
             Regex regex = new Regex(@"(\r\n|\r|\n)+");
             if (InformationAboutServer != null)
-            {
                 InformationAboutServer = regex.Replace(InformationAboutServer, "<br />");
-                InformationAboutServer = InformationAboutServer.Remove(0, 6);
-            }
         }
     }
 }

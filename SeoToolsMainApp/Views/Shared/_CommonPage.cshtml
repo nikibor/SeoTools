@@ -6,8 +6,12 @@
     <script type="text/javascript" src="~/scripts/jquery-3.0.0.min.js"></script>
 </head>
 <body style="background: url(/Content/4-fon-dlya-sayta.jpg)">
+
     @RenderBody()    
-    @RenderSection("scripts", required: false)
+
+    <footer>
+        @System.DateTime.Now.Year
+    </footer>
     <script src="~/scripts/jquery-3.0.0.js"></script>
     <script src="~/scripts/jquery-3.0.0.min.js"></script>
 </body>

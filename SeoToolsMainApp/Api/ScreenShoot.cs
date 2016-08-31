@@ -26,8 +26,8 @@ namespace SeoToolsMainApp.Api
         /// <param name="url"></param>
         public ScreenShoot(string url)
         {            
-            DesktopUrl = $"http://mini.s-shot.ru/1024/1000/jpeg/?{url}";
-            MobileUrl = $"http://mini.s-shot.ru/720/800/jpeg/?{url}";
+            DesktopUrl = $"http://mini.s-shot.ru/1024x822/600/jpeg/?{url}";
+            MobileUrl = $"http://mini.s-shot.ru/414x736/400/jpeg/?{url}";
         }
     }
 }

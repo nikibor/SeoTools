@@ -7,8 +7,9 @@
 <div class="jumbotron" align="center">
     @using (Html.BeginForm("Scan", "Home"))
     {
-        <p>Ссылка на сайт: @Html.TextBoxFor(x => x.Url)</p>
-        <input type="submit" class="btn btn-lg btn-success" value="Отправить" />
+        <h3><label>Ссылка на сайт:</label></h3>
+        @Html.TextBoxFor(x => x.Url, new { @class = "form-control", @placeholder = "Например: www.site.ru" })
+        <input type="submit" class="btn btn-success" value="Отправить"/>
         @Html.AntiForgeryToken()
     }
 </div>

@@ -21,8 +21,8 @@ namespace SeoToolsMainApp.Controllers
         public ActionResult Scan(string url)
         {
             url = HttpProtocol.HttpPrefixCheck(url);
-            if (HttpProtocol.IsUrl(url))
-            {
+            if (HttpProtocol.IsUrl(url) && HttpProtocol.ExistUrl(url))
+            {                
                 var model = new DividedModel(url);
                 return View(model);
             }

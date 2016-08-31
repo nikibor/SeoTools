@@ -3,6 +3,9 @@
     ViewBag.Title = "ErrorPage";
     Layout = "~/Views/Shared/_CommonPage.cshtml";
 }
-
-<h2 style="border-width:1px;border-color:red;">ErrorPage</h2>
+<div class="jumbotron">
+    <h2 style="border-width:1px;border-color:red;">Error</h2>
+    <br />
+    @Html.ActionLink("На главную", "Index", "Scan", new { @class = "btn btn-primary btn-lg" })
+</div>
 

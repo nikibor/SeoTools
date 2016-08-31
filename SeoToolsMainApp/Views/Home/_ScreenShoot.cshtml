@@ -1,27 +1,30 @@
 ﻿@model SeoToolsMainApp.Api.ScreenShoot
 
-<h1>Screenshoot работает</h1>
 <div class="card">
     <div class="card-header">
         <h3>Скринкасты сайтов:</h3>
     </div>
     <div class="card-block">
-        <div class="card">
-            <div class="card-header">
-                <h4>Десктопная версия сайта</h4>
-            </div>
-            <div class="card-img">
-                <img src="@Model.DesktopUrl" alt="Десктопная версия сайта" title="Десктопная версия сайта" style="max-width :100%"/>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Десктопная версия сайта</h4>
+                </div>
+                <div class="card-img">
+                    <img src="@Model.DesktopUrl" alt="Десктопная версия сайта" title="Десктопная версия сайта" style="max-width :100%; max-height:500px" />
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                <h4>Мобильная версия сайта</h4>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Мобильная версия сайта</h4>
+                </div>
+                <div class="card-img">
+                    <img src="@Model.MobileUrl" alt="Мобильная версия сайта" title="Мобильная версия сайта" style="max-width :100%; max-height:480px" />
+                </div>
             </div>
-            <div class="card-img">
-                <img src="@Model.MobileUrl" alt="Мобильная версия сайта" title="Мобильная версия сайта" style="max-width :100%"/>
-            </div>
-        </div>        
+        </div>
     </div>
 </div>
 

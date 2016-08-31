@@ -123,5 +123,10 @@ namespace SeoToolsMainApp.Core
                 url = $"http://{url}";
             return url;
         }
+        public static bool ExistUrl(string url)
+        {
+            var response = TakeData(url, "GET", Encoding.UTF8);
+            return (response != null) ? true : false;
+        }
     }
 }

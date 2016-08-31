@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeoToolsMainApp.Interfaces
 {
-    interface IGoogleSafeBrowsing
+    interface IApi
     {
-        string HaveViruses { set; get; }
-        string ColorMessage { set; get; }
     }
 }

@@ -12,6 +12,7 @@ namespace SeoToolsMainApp.Api
     public class GoogleSafeBrowser: AbstractApi, IGoogleSafeBrowsing
     {
         public string HaveViruses { set; get; }
+        public string ColorMessage { set; get; }
 
         /// <summary>
         /// Проверка ссылки на наличие вирусов при помощи Google Safe Browsing
@@ -31,6 +32,7 @@ namespace SeoToolsMainApp.Api
 
                 var response = HttpProtocol.TakeData(request, method, contentType, data);
                 HaveViruses = (data == "{}\n") ? "Сайт находится в реестре опасных сайтов" : "Сайт не содержит вирусов";
+                ColorMessage = (data == "{}\n") ? "red" : "forestgreen";
             }
             catch (Exception)
             {

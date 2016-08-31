@@ -5,7 +5,9 @@
         <h3>Информация о сервере</h3>
     </div>
     <div class="card-block">
-        <h4>@Model.InformationAboutServer</h4>
+        <h5>@{
+            WriteLiteral(Model.InformationAboutServer);
+        }</h5>
     </div>
 </div>
 
