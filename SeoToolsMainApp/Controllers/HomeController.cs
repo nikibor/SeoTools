@@ -29,5 +29,23 @@ namespace SeoToolsMainApp.Controllers
             else
                 return View("ErrorPage");
         }
+
+        [HttpGet]
+        public ActionResult Cast(string url)
+        {
+            url = HttpProtocol.HttpPrefixCheck(url);
+            if (HttpProtocol.IsUrl(url) && HttpProtocol.ExistUrl(url))
+            {
+                var model = new DividedModel(url);                
+                return View(model);
+            }
+            else
+                return View("ErrorPage");
+        }
+        [HttpGet]
+        public ActionResult Report(string url)
+        {
+            return File(PdfWriter.RenderDocument(url), "application/pdf");
+        }
     }
 }

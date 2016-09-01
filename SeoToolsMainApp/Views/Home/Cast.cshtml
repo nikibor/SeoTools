@@ -1,0 +1,13 @@
+﻿@model SeoToolsMainApp.Models.DividedModel
+
+@{
+    ViewBag.Title = "Cast";
+    Layout = "~/Views/Shared/_CommonPage.cshtml";
+}
+@foreach (var api in Model.Api)
+{
+    <div class="container">
+        @Html.Partial(api.Key, api.Value)
+    </div>
+}       
+
